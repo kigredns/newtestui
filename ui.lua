@@ -471,19 +471,29 @@ function HawkLib:Window(Win)
 			Minimize.Position = HawkLib.Elements.WideMenu.MinimizePosition
 		end
 
-		Title.Name = "Title"
-		Title.Parent = TitleBar
-		Title.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
-		Title.BackgroundTransparency = 1.000
-		Title.BorderColor3 = Color3.fromRGB(36, 36, 36)
-		Title.BorderSizePixel = 0
-		Title.Position = UDim2.new(0.0320945941, 0, 0, 0)
-		Title.Size = UDim2.new(0, 112, 0, 42)
-		Title.Font = Enum.Font.Gotham
-		Title.Text = ScriptName
-		Title.TextColor3 = HawkLib.Themes[Theme].TitleTextColor
-		Title.TextSize = 16.000
-		Title.TextXAlignment = Enum.TextXAlignment.Left
+
+local theme = HawkLib.Themes[Theme]  
+
+
+local Title = Instance.new("TextLabel")
+Title.Name = "Title"
+Title.Parent = TitleBar
+Title.BackgroundTransparency = 1
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.032, 0, 0, 0)
+Title.Size = UDim2.new(0, 300, 0, 42)
+Title.Font = Enum.Font.Gotham
+Title.TextSize = 16
+Title.TextXAlignment = Enum.TextXAlignment.Left
+Title.RichText = true 
+
+local function Color3ToRGB(color)
+    return string.format("%d, %d, %d", math.floor(color.R * 255), math.floor(color.G * 255), math.floor(color.B * 255))
+end
+
+Title.Text = 
+    ("<font color='rgb(%s)'>Sander</font>"):format(Color3ToRGB(theme.TitleTextColor)) ..
+    "<font color='rgb(255, 255, 255)'>XY「 BrookHaven 」 • </font>"
 
 		if OnPc or OnTabletLaptop then
 			Title.Position = HawkLib.Elements.WideMenu.TitlePosition
