@@ -472,7 +472,7 @@ function HawkLib:Window(Win)
 		end
 
 
-local theme = HawkLib.Themes[Theme] 
+local theme = HawkLib.Themes[Theme]  
 
 local function BrightenColor(color, amount)
     local r = math.min(color.R * 255 + amount, 255)
@@ -488,16 +488,18 @@ Title.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
 Title.BackgroundTransparency = 1.000
 Title.BorderColor3 = Color3.fromRGB(36, 36, 36)
 Title.BorderSizePixel = 0
-Title.Position = UDim2.new(0.0320945941, 0, 0, 0)
-Title.Size = UDim2.new(0, 112, 0, 42)
+Title.Position = UDim2.new(0.032, 0, 0, 0)
+Title.Size = UDim2.new(0, 400, 0, 42)  
 Title.Font = Enum.Font.Gotham
-Title.TextSize = 29.000
+Title.TextSize = 16.000
 Title.TextXAlignment = Enum.TextXAlignment.Left
-Title.RichText = true  
+Title.RichText = true 
 
 Title.Text = 
-    ("<b><font color='rgb(%s)'>Sander</font></b>"):format(BrightenColor(theme.TitleTextColor, 100)) ..
-    "<b><font color='rgb(255, 255, 255)'>XY「 BrookHaven 」 • </font></b>"
+    ("<b><font color='rgb(%s)'>Sander</font></b> "):format(BrightenColor(theme.TitleTextColor, 100)) ..
+    "<b><font color='rgb(255, 255, 255)'> XY「 BrookHaven 」</font></b>" ..
+    "<b><font color='rgb(255, 0, 0)'> • Christmas • </font></b>"
+
 
 		if OnPc or OnTabletLaptop then
 			Title.Position = HawkLib.Elements.WideMenu.TitlePosition
