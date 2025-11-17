@@ -444,9 +444,9 @@ function HawkLib:Window(Win)
 		Close.Position = UDim2.new(0.944256783, 0, 0.25, 0)
 		Close.Size = UDim2.new(0, 20, 0, 19)
 		Close.Font = Enum.Font.Gotham
-		Close.Text = "X"
+		Close.Text = "🔴"
 		Close.TextColor3 = HawkLib.Themes[Theme].CloseMinimize
-		Close.TextSize = 18.000
+		Close.TextSize = 22.000
 		Close.Visible = false
 
 		if OnPc or OnTabletLaptop then
@@ -491,7 +491,7 @@ Title.BorderSizePixel = 0
 Title.Position = UDim2.new(0.032, 0, 0, 0)
 Title.Size = UDim2.new(0, 400, 0, 42)  
 Title.Font = Enum.Font.Gotham
-Title.TextSize = 16.000
+Title.TextSize = 19.000
 Title.TextXAlignment = Enum.TextXAlignment.Left
 Title.RichText = true 
 
